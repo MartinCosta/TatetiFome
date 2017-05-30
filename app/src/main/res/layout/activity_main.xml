@@ -24,14 +24,6 @@
         android:textColor="#FFFFFF"
         android:id="@+id/winCheck"/>
 
-
-     <rotate
-         android:fromDegrees="180"
-         android:toDegrees="180"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentStart="true"
-         android:id="@+id/rotate">
-
     <View
     android:layout_width="10dp"
     android:layout_height="wrap_content"
@@ -41,7 +33,7 @@
     android:elevation="10dp"
     android:visibility="invisible"
     android:id="@+id/winVertical01"/>
-    </rotate>
+
 
     <View
         android:id="@+id/winVertical02"
@@ -61,10 +53,7 @@
         android:layout_height="350dp"
         android:orientation="vertical"
         android:id="@+id/linearLayout2"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/rotate"
-        android:layout_toEndOf="@+id/rotate">
-
+        android:layout_alignParentTop="true">
 
 
 
