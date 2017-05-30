@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#212121"
+    tools:context="com.example.android.tatetifome.MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fome"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/turnOf_text"
+        android:textColor="#FFFFFF"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="who won?"
+        android:textColor="#FFFFFF"
+        android:id="@+id/winCheck"/>
+
+
+     <rotate
+         android:fromDegrees="180"
+         android:toDegrees="180"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true"
+         android:id="@+id/rotate">
+
+    <View
+    android:layout_width="10dp"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/linearLayout2"
+    android:layout_centerHorizontal="true"
+    android:background="#1A237E"
+    android:elevation="10dp"
+    android:visibility="invisible"
+    android:id="@+id/winVertical01"/>
+    </rotate>
+
+    <View
+        android:id="@+id/winVertical02"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:background="#1A237E"
+        android:elevation="10dp"
+        android:rotation="205"
+        android:visibility="invisible" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/rotate"
+        android:layout_toEndOf="@+id/rotate">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#212121">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_centerInParent="true"
+            android:background="#1A237E"
+            android:elevation="10dp"
+            android:visibility="invisible"
+            android:id="@+id/winHorizontal01"/>
+
+        <ImageButton
+            android:id="@+id/box7"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:onClick="mark"
+            />
+
+
+        <ImageButton
+            android:id="@+id/box8"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/box7"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:onClick="mark" />
+
+        <ImageButton
+            android:id="@+id/box9"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/box8"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:onClick="mark" />
+
+
+
+      </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#212121">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_centerInParent="true"
+            android:background="#1A237E"
+            android:elevation="10dp"
+            android:visibility="invisible"
+            android:id="@+id/winHorizontal02"/>
+
+        <ImageButton
+            android:id="@+id/box4"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:onClick="mark" />
+
+
+        <ImageButton
+            android:id="@+id/box5"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/box4"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:onClick="mark" />
+
+        <ImageButton
+            android:id="@+id/box6"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:onClick="mark"
+            android:layout_toRightOf="@id/box5"
+
+            />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout4"
+            android:layout_weight="1"
+            android:background="#212121">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_centerInParent="true"
+                android:background="#1A237E"
+                android:elevation="10dp"
+                android:visibility="invisible"
+                android:id="@+id/winHorizontal03"/>
+
+            <ImageButton
+                android:id="@+id/box1"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:onClick="mark" />
+
+
+            <ImageButton
+                android:id="@+id/box2"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/box1"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:onClick="mark" />
+
+            <ImageButton
+                android:id="@+id/box3"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/box2"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:onClick="mark"
+                />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+

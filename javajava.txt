@@ -1,0 +1,219 @@
+package com.example.martin.myapplication;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    boolean isLockedB7;
+    boolean isLockedB8;
+    boolean isLockedB9;
+    boolean isLockedB4;
+    boolean isLockedB5;
+    boolean isLockedB6;
+    boolean isLockedB1;
+    boolean isLockedB2;
+    boolean isLockedB3;
+    String turnOfX = "X";
+    String turnOfO = "O";
+    int turnCounter = 1;    //If is impar, is X turn, if is pair, is O turn
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+   /* private void initializeGame(){
+        isLockedB7=false;
+    }*/
+
+    public void mark7(View view) {
+
+        if (isLockedB7 == false) {
+            checkForPlayer();
+
+            ImageButton setMarkInBox = (ImageButton) findViewById(R.id.box7);
+            if (turnCounter % 2 == 1) {
+                setMarkInBox.setImageResource(R.drawable.x);
+            } else {
+                setMarkInBox.setImageResource(R.drawable.o);
+            }
+            isLockedB7 = true;
+            turnCounter++;
+            checkForPlayer();
+        } else {
+            checkForPlayer();
+        }
+    }
+
+    public void mark8(View view) {
+
+        if (isLockedB8 == false) {
+            checkForPlayer();
+
+            ImageButton setMarkInBox = (ImageButton) findViewById(R.id.box8);
+            if (turnCounter % 2 == 1) {
+                setMarkInBox.setImageResource(R.drawable.x);
+            } else {
+                setMarkInBox.setImageResource(R.drawable.o);
+            }
+            isLockedB8 = true;
+            turnCounter++;
+            checkForPlayer();
+        } else {
+            checkForPlayer();
+        }
+    }
+
+    public void mark9(View view) {
+
+        if (isLockedB9 == false) {
+            checkForPlayer();
+
+            ImageButton setMarkInBox = (ImageButton) findViewById(R.id.box9);
+            if (turnCounter % 2 == 1) {
+                setMarkInBox.setImageResource(R.drawable.x);
+            } else {
+                setMarkInBox.setImageResource(R.drawable.o);
+            }
+            isLockedB9 = true;
+            turnCounter++;
+            checkForPlayer();
+        } else {
+            checkForPlayer();
+        }
+    }
+
+    public void mark4(View view) {
+
+        if (isLockedB4 == false) {
+            checkForPlayer();
+
+            ImageButton setMarkInBox = (ImageButton) findViewById(R.id.box4);
+            if (turnCounter % 2 == 1) {
+                setMarkInBox.setImageResource(R.drawable.x);
+            } else {
+                setMarkInBox.setImageResource(R.drawable.o);
+            }
+            isLockedB4 = true;
+            turnCounter++;
+            checkForPlayer();
+        } else {
+            checkForPlayer();
+        }
+    }
+
+    public void mark5(View view) {
+
+        if (isLockedB5 == false) {
+            checkForPlayer();
+
+            ImageButton setMarkInBox = (ImageButton) findViewById(R.id.box5);
+            if (turnCounter % 2 == 1) {
+                setMarkInBox.setImageResource(R.drawable.x);
+            } else {
+                setMarkInBox.setImageResource(R.drawable.o);
+            }
+            isLockedB5 = true;
+            turnCounter++;
+            checkForPlayer();
+        } else {
+            checkForPlayer();
+        }
+    }
+
+    public void mark6(View view) {
+
+        if (isLockedB6 == false) {
+            checkForPlayer();
+
+            ImageButton setMarkInBox = (ImageButton) findViewById(R.id.box6);
+            if (turnCounter % 2 == 1) {
+                setMarkInBox.setImageResource(R.drawable.x);
+            } else {
+                setMarkInBox.setImageResource(R.drawable.o);
+            }
+            isLockedB6 = true;
+            turnCounter++;
+            checkForPlayer();
+        } else {
+            checkForPlayer();
+        }
+    }
+
+    public void mark1(View view) {
+
+        if (isLockedB1 == false) {
+            checkForPlayer();
+
+            ImageButton setMarkInBox = (ImageButton) findViewById(R.id.box1);
+            if (turnCounter % 2 == 1) {
+                setMarkInBox.setImageResource(R.drawable.x);
+            } else {
+                setMarkInBox.setImageResource(R.drawable.o);
+            }
+            isLockedB1 = true;
+            turnCounter++;
+            checkForPlayer();
+        } else {
+            checkForPlayer();
+        }
+    }
+
+    public void mark2(View view) {
+
+        if (isLockedB2 == false) {
+            checkForPlayer();
+
+            ImageButton setMarkInBox = (ImageButton) findViewById(R.id.box2);
+            if (turnCounter % 2 == 1) {
+                setMarkInBox.setImageResource(R.drawable.x);
+            } else {
+                setMarkInBox.setImageResource(R.drawable.o);
+            }
+            isLockedB2 = true;
+            turnCounter++;
+            checkForPlayer();
+        } else {
+            checkForPlayer();
+        }
+    }
+
+    public void mark3(View view) {
+
+        if (isLockedB3 == false) {
+            checkForPlayer();
+
+            ImageButton setMarkInBox = (ImageButton) findViewById(R.id.box3);
+            if (turnCounter % 2 == 1) {
+                setMarkInBox.setImageResource(R.drawable.x);
+            } else {
+                setMarkInBox.setImageResource(R.drawable.o);
+            }
+            isLockedB3 = true;
+            turnCounter++;
+            checkForPlayer();
+        } else {
+            checkForPlayer();
+        }
+    }
+
+
+    private void checkForPlayer() {
+        if (turnCounter % 2 == 1) {
+            displayTurnOfMessage(turnOfO); //it would do it so quickly that is better to anticipate and generate this message now this way
+        } else {
+            displayTurnOfMessage(turnOfX); //it would do it so quickly that is better to anticipate and generate this message now this way
+        }
+    }
+
+    private void displayTurnOfMessage(String turnOfSomeone) {
+        TextView turnOfPlayerTextView = (TextView) findViewById(R.id.turnOf_text);
+        turnOfPlayerTextView.setText("Turn of " + turnOfSomeone);
+    }
+
+}
