@@ -56,29 +56,34 @@ public class MainActivity extends AppCompatActivity {
         isLockedB7=false;
     }*/
 
-    public void mark (View view) {
-            switch(view.getId())  {
+        public void mark (View view) {
+
+
+
+            switch (view.getId()) {
                 case R.id.box1:
                     ImageButton setMarkInBox1 = (ImageButton) findViewById(R.id.box1);
-                    if (turnCounter % 2 == 1 && isLockedB1 == false){
-                    setMarkInBox1.setImageResource(R.drawable.x);
-                    xBox1_check = true;}
-                    else if (turnCounter % 2 != 1 && isLockedB1 == false){
+                    if (turnCounter % 2 == 1 && isLockedB1 == false) {
+                        setMarkInBox1.setImageResource(R.drawable.x);
+                        xBox1_check = true;
+                    } else if (turnCounter % 2 != 1 && isLockedB1 == false) {
                         setMarkInBox1.setImageResource(R.drawable.o);
-                        oBox1_check = true;}
+                        oBox1_check = true;
+                    }
                     isLockedB1 = true;
                     turnCounter++;
                     checkForPlayer();
                     checkWin();
-                    break   ;
+                    break;
                 case R.id.box2:
                     ImageButton setMarkInBox2 = (ImageButton) findViewById(R.id.box2);
-                    if (turnCounter % 2 == 1 && isLockedB2 == false){
+                    if (turnCounter % 2 == 1 && isLockedB2 == false) {
                         setMarkInBox2.setImageResource(R.drawable.x);
-                        xBox2_check = true;}
-                    else if (turnCounter % 2 != 1 && isLockedB2 == false) {
+                        xBox2_check = true;
+                    } else if (turnCounter % 2 != 1 && isLockedB2 == false) {
                         setMarkInBox2.setImageResource(R.drawable.o);
-                        oBox2_check = true;}
+                        oBox2_check = true;
+                    }
                     isLockedB2 = true;
                     turnCounter++;
                     checkForPlayer();
@@ -86,24 +91,26 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.box3:
                     ImageButton setMarkInBox3 = (ImageButton) findViewById(R.id.box3);
-                    if (turnCounter % 2 == 1 && isLockedB3 == false){
+                    if (turnCounter % 2 == 1 && isLockedB3 == false) {
                         setMarkInBox3.setImageResource(R.drawable.x);
-                        xBox3_check = true;}
-                    else if (turnCounter % 2 != 1 && isLockedB3 == false) {
+                        xBox3_check = true;
+                    } else if (turnCounter % 2 != 1 && isLockedB3 == false) {
                         setMarkInBox3.setImageResource(R.drawable.o);
-                        oBox3_check = true;}
+                        oBox3_check = true;
+                    }
                     isLockedB3 = true;
                     turnCounter++;
                     checkWin();
                     break;
                 case R.id.box4:
                     ImageButton setMarkInBox4 = (ImageButton) findViewById(R.id.box4);
-                    if (turnCounter % 2 == 1 && isLockedB4 == false){
+                    if (turnCounter % 2 == 1 && isLockedB4 == false) {
                         setMarkInBox4.setImageResource(R.drawable.x);
-                        xBox4_check = true;}
-                    else if (turnCounter % 2 != 1 && isLockedB4 == false) {
+                        xBox4_check = true;
+                    } else if (turnCounter % 2 != 1 && isLockedB4 == false) {
                         setMarkInBox4.setImageResource(R.drawable.o);
-                        oBox4_check = true;}
+                        oBox4_check = true;
+                    }
                     isLockedB4 = true;
                     turnCounter++;
                     checkForPlayer();
@@ -111,12 +118,13 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.box5:
                     ImageButton setMarkInBox5 = (ImageButton) findViewById(R.id.box5);
-                    if (turnCounter % 2 == 1 && isLockedB5 == false){
+                    if (turnCounter % 2 == 1 && isLockedB5 == false) {
                         setMarkInBox5.setImageResource(R.drawable.x);
-                        xBox5_check = true;}
-                    else if (turnCounter % 2 != 1 && isLockedB5 == false) {
+                        xBox5_check = true;
+                    } else if (turnCounter % 2 != 1 && isLockedB5 == false) {
                         setMarkInBox5.setImageResource(R.drawable.o);
-                        oBox5_check = true;}
+                        oBox5_check = true;
+                    }
                     isLockedB5 = true;
                     turnCounter++;
                     checkForPlayer();
@@ -124,12 +132,13 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.box6:
                     ImageButton setMarkInBox6 = (ImageButton) findViewById(R.id.box6);
-                    if (turnCounter % 2 == 1 && isLockedB6 == false){
+                    if (turnCounter % 2 == 1 && isLockedB6 == false) {
                         setMarkInBox6.setImageResource(R.drawable.x);
-                        xBox6_check = true;}
-                    else if (turnCounter % 2 != 1 && isLockedB6 == false){
+                        xBox6_check = true;
+                    } else if (turnCounter % 2 != 1 && isLockedB6 == false) {
                         setMarkInBox6.setImageResource(R.drawable.o);
-                        oBox6_check = true;}
+                        oBox6_check = true;
+                    }
                     isLockedB6 = true;
                     turnCounter++;
                     checkForPlayer();
@@ -137,12 +146,13 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.box7:
                     ImageButton setMarkInBox7 = (ImageButton) findViewById(R.id.box7);
-                    if (turnCounter % 2 == 1 && isLockedB7 == false){
+                    if (turnCounter % 2 == 1 && isLockedB7 == false) {
                         setMarkInBox7.setImageResource(R.drawable.x);
-                        xBox7_check = true;}
-                    else if (turnCounter % 2 != 1 && isLockedB7 == false) {
+                        xBox7_check = true;
+                    } else if (turnCounter % 2 != 1 && isLockedB7 == false) {
                         setMarkInBox7.setImageResource(R.drawable.o);
-                        oBox7_check = true;}
+                        oBox7_check = true;
+                    }
                     isLockedB7 = true;
                     turnCounter++;
                     checkForPlayer();
@@ -150,12 +160,13 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.box8:
                     ImageButton setMarkInBox8 = (ImageButton) findViewById(R.id.box8);
-                    if (turnCounter % 2 == 1 && isLockedB8 == false){
+                    if (turnCounter % 2 == 1 && isLockedB8 == false) {
                         setMarkInBox8.setImageResource(R.drawable.x);
-                        xBox8_check = true;}
-                    else if (turnCounter % 2 != 1 && isLockedB8 == false) {
+                        xBox8_check = true;
+                    } else if (turnCounter % 2 != 1 && isLockedB8 == false) {
                         setMarkInBox8.setImageResource(R.drawable.o);
-                        oBox8_check = true;}
+                        oBox8_check = true;
+                    }
                     isLockedB8 = true;
                     turnCounter++;
                     checkForPlayer();
@@ -163,19 +174,22 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.box9:
                     ImageButton setMarkInBox9 = (ImageButton) findViewById(R.id.box9);
-                    if (turnCounter % 2 == 1 && isLockedB9 == false){
+                    if (turnCounter % 2 == 1 && isLockedB9 == false) {
                         setMarkInBox9.setImageResource(R.drawable.x);
-                        xBox9_check = true;}
-                    else if (turnCounter % 2 != 1 && isLockedB9 == false) {
+                        xBox9_check = true;
+                    } else if (turnCounter % 2 != 1 && isLockedB9 == false) {
                         setMarkInBox9.setImageResource(R.drawable.o);
-                        oBox9_check = true;}
+                        oBox9_check = true;
+                    }
                     isLockedB9 = true;
                     turnCounter++;
                     checkForPlayer();
                     checkWin();
                     break;
             }
-            }
+        }
+
+
 
     /*function to check Winner */
             public void checkWin () {
