@@ -1,15 +1,10 @@
 package com.example.android.tatetifome;
 
-import android.view.View;
-import android.widget.ImageButton;
-
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
-import static android.R.id.message;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     int turnCounter = 1;
     //If is impar, is X turn, if is pair, is O turn
 
+
+
+//    sos alto gomaaaa!
     boolean xBox1_check = false;  /* booleans use to check Winning player*/
     boolean xBox2_check = false;
     boolean xBox3_check = false;
