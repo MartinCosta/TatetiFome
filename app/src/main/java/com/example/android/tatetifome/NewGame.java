@@ -1,18 +1,15 @@
 package com.example.android.tatetifome;
 
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
+import static android.os.Build.VERSION_CODES.M;
+import static com.example.android.tatetifome.R.drawable.o;
 /**
  * Created by Martin on 2/6/2017.
  */
-
-
-
 public class NewGame extends AppCompatActivity {
 
     boolean isLockedB7;         /* booleans to unlocked or locked Boxes*/
@@ -27,12 +24,7 @@ public class NewGame extends AppCompatActivity {
     String turnOfX = "X";
     String turnOfO = "O";
     int turnCounter = 1;
-    //If is impar, is X turn, if is pair, is O turn
-
-
-
-    //    sos alto gomaaaa!
-    boolean xBox1_check = false;  /* booleans use to check Winning player*/
+    boolean xBox1_check = false;    /* booleans variables to check player winner and display "X" or "O"*/
     boolean xBox2_check = false;
     boolean xBox3_check = false;
     boolean xBox4_check = false;
@@ -57,13 +49,7 @@ public class NewGame extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-   /* private void initializeGame(){
-        isLockedB7=false;
-    }*/
-
-    public void mark (View view) {
-
-
+    public void mark(View view) {
 
         switch (view.getId()) {
             case R.id.box1:
@@ -72,7 +58,7 @@ public class NewGame extends AppCompatActivity {
                     setMarkInBox1.setImageResource(R.drawable.x);
                     xBox1_check = true;
                 } else if (turnCounter % 2 != 1 && isLockedB1 == false) {
-                    setMarkInBox1.setImageResource(R.drawable.o);
+                    setMarkInBox1.setImageResource(o);
                     oBox1_check = true;
                 }
                 isLockedB1 = true;
@@ -86,7 +72,7 @@ public class NewGame extends AppCompatActivity {
                     setMarkInBox2.setImageResource(R.drawable.x);
                     xBox2_check = true;
                 } else if (turnCounter % 2 != 1 && isLockedB2 == false) {
-                    setMarkInBox2.setImageResource(R.drawable.o);
+                    setMarkInBox2.setImageResource(o);
                     oBox2_check = true;
                 }
                 isLockedB2 = true;
@@ -100,7 +86,7 @@ public class NewGame extends AppCompatActivity {
                     setMarkInBox3.setImageResource(R.drawable.x);
                     xBox3_check = true;
                 } else if (turnCounter % 2 != 1 && isLockedB3 == false) {
-                    setMarkInBox3.setImageResource(R.drawable.o);
+                    setMarkInBox3.setImageResource(o);
                     oBox3_check = true;
                 }
                 isLockedB3 = true;
@@ -113,7 +99,7 @@ public class NewGame extends AppCompatActivity {
                     setMarkInBox4.setImageResource(R.drawable.x);
                     xBox4_check = true;
                 } else if (turnCounter % 2 != 1 && isLockedB4 == false) {
-                    setMarkInBox4.setImageResource(R.drawable.o);
+                    setMarkInBox4.setImageResource(o);
                     oBox4_check = true;
                 }
                 isLockedB4 = true;
@@ -127,7 +113,7 @@ public class NewGame extends AppCompatActivity {
                     setMarkInBox5.setImageResource(R.drawable.x);
                     xBox5_check = true;
                 } else if (turnCounter % 2 != 1 && isLockedB5 == false) {
-                    setMarkInBox5.setImageResource(R.drawable.o);
+                    setMarkInBox5.setImageResource(o);
                     oBox5_check = true;
                 }
                 isLockedB5 = true;
@@ -141,7 +127,7 @@ public class NewGame extends AppCompatActivity {
                     setMarkInBox6.setImageResource(R.drawable.x);
                     xBox6_check = true;
                 } else if (turnCounter % 2 != 1 && isLockedB6 == false) {
-                    setMarkInBox6.setImageResource(R.drawable.o);
+                    setMarkInBox6.setImageResource(o);
                     oBox6_check = true;
                 }
                 isLockedB6 = true;
@@ -155,7 +141,7 @@ public class NewGame extends AppCompatActivity {
                     setMarkInBox7.setImageResource(R.drawable.x);
                     xBox7_check = true;
                 } else if (turnCounter % 2 != 1 && isLockedB7 == false) {
-                    setMarkInBox7.setImageResource(R.drawable.o);
+                    setMarkInBox7.setImageResource(o);
                     oBox7_check = true;
                 }
                 isLockedB7 = true;
@@ -169,7 +155,7 @@ public class NewGame extends AppCompatActivity {
                     setMarkInBox8.setImageResource(R.drawable.x);
                     xBox8_check = true;
                 } else if (turnCounter % 2 != 1 && isLockedB8 == false) {
-                    setMarkInBox8.setImageResource(R.drawable.o);
+                    setMarkInBox8.setImageResource(o);
                     oBox8_check = true;
                 }
                 isLockedB8 = true;
@@ -183,7 +169,7 @@ public class NewGame extends AppCompatActivity {
                     setMarkInBox9.setImageResource(R.drawable.x);
                     xBox9_check = true;
                 } else if (turnCounter % 2 != 1 && isLockedB9 == false) {
-                    setMarkInBox9.setImageResource(R.drawable.o);
+                    setMarkInBox9.setImageResource(o);
                     oBox9_check = true;
                 }
                 isLockedB9 = true;
@@ -193,27 +179,21 @@ public class NewGame extends AppCompatActivity {
                 break;
         }
     }
-
-
-
     /*function to check Winner */
-    public void checkWin () {
-
+    public void checkWin() {
         String winX = "PLayer X is the winner!";
         String winO = "Player O is the winner!";
 
         if ((xBox1_check && xBox2_check && xBox3_check) == true) {
 
-            View verticalView1 =  findViewById(R.id.winHorizontal03);
+            View verticalView1 = findViewById(R.id.winHorizontal03);
             verticalView1.setVisibility(View.VISIBLE);
-
             displayMessageWin(winX);
 
         } else if ((oBox1_check && oBox2_check && oBox3_check) == true) {
 
-            View verticalView1 =  findViewById(R.id.winHorizontal03);
+            View verticalView1 = findViewById(R.id.winHorizontal03);
             verticalView1.setVisibility(View.VISIBLE);
-
             displayMessageWin(winO);
 
         } else if ((xBox1_check && xBox4_check && xBox7_check) == true) {
@@ -226,73 +206,64 @@ public class NewGame extends AppCompatActivity {
 
         } else if ((xBox4_check && xBox5_check && xBox6_check) == true) {
 
-            View verticalView1 =  findViewById(R.id.winHorizontal02);
+            View verticalView1 = findViewById(R.id.winHorizontal02);
             verticalView1.setVisibility(View.VISIBLE);
-
             displayMessageWin(winX);
         } else if ((oBox4_check && oBox5_check && oBox6_check) == true) {
 
-            View verticalView1 =  findViewById(R.id.winHorizontal02);
+            View verticalView1 = findViewById(R.id.winHorizontal02);
             verticalView1.setVisibility(View.VISIBLE);
-
             displayMessageWin(winO);
 
         } else if ((xBox7_check && xBox8_check && oBox9_check) == true) {
 
-            View verticalView1 =  findViewById(R.id.winHorizontal01);
+            View verticalView1 = findViewById(R.id.winHorizontal01);
             verticalView1.setVisibility(View.VISIBLE);
-
             displayMessageWin(winX);
 
         } else if ((oBox7_check && oBox8_check && oBox9_check) == true) {
 
-            View verticalView1 =  findViewById(R.id.winHorizontal01);
+            View verticalView1 = findViewById(R.id.winHorizontal01);
             verticalView1.setVisibility(View.VISIBLE);
-
             displayMessageWin(winO);
-        }
-        else if ((xBox2_check && xBox5_check && xBox8_check) == true){
 
-            View verticalView1 =  findViewById(R.id.winVertical01);
+        } else if ((xBox2_check && xBox5_check && xBox8_check) == true) {
+
+            View verticalView1 = findViewById(R.id.winVertical01);
             verticalView1.setVisibility(View.VISIBLE);
-
             displayMessageWin(winX);
-        }
-        else if ((oBox2_check && oBox5_check && oBox8_check) == true) {
 
-            View verticalView1 =  findViewById(R.id.winVertical01);
+        } else if ((oBox2_check && oBox5_check && oBox8_check) == true) {
+
+            View verticalView1 = findViewById(R.id.winVertical01);
             verticalView1.setVisibility(View.VISIBLE);
-
             displayMessageWin(winO);
-        }
-        else if ((xBox3_check && xBox6_check && xBox9_check) == true) {
 
-            displayMessageWin(winX);
-        }
-        else if ((oBox3_check && oBox6_check && oBox9_check) == true) {
-
-            displayMessageWin(winO);
-        }
-        else if ((xBox1_check && xBox5_check && xBox9_check) == true) {
-
-            displayMessageWin(winX);
-        }
-        else if ((oBox1_check && oBox5_check && oBox9_check) == true) {
-
-            displayMessageWin(winO);
-        }
-        else if ((xBox3_check && xBox5_check && xBox7_check) == true) {
+        } else if ((xBox3_check && xBox6_check && xBox9_check) == true) {
 
             displayMessageWin(winX);
 
-        }
-        else if ((oBox3_check && oBox5_check && oBox7_check) == true) {
+        } else if ((oBox3_check && oBox6_check && oBox9_check) == true) {
+
+            displayMessageWin(winO);
+
+        } else if ((xBox1_check && xBox5_check && xBox9_check) == true) {
+
+            displayMessageWin(winX);
+
+        } else if ((oBox1_check && oBox5_check && oBox9_check) == true) {
+
+            displayMessageWin(winO);
+
+        } else if ((xBox3_check && xBox5_check && xBox7_check) == true) {
+
+            displayMessageWin(winX);
+
+        } else if ((oBox3_check && oBox5_check && oBox7_check) == true) {
 
             displayMessageWin(winO);
         }
     }
-
-
     /* function to check turn for player */
     private void checkForPlayer() {
         if (turnCounter % 2 == 1) {
@@ -308,8 +279,8 @@ public class NewGame extends AppCompatActivity {
     }
     /* function to display Winning Player Message */
     private void displayMessageWin(String message) {
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.winCheck);
-        orderSummaryTextView.setText(message);
+        TextView checkWinTextView = (TextView) findViewById(R.id.winCheck);
+        checkWinTextView.setText(message);
     }
 }
 
