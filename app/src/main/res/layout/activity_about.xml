@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.example.android.tatetifome.About">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tateti Fome"
+        tools:layout_editor_absoluteY="187dp"
+        tools:layout_editor_absoluteX="137dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginBottom="23dp"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C Go.Fo.Corp 2017 All rights reserved"
+        tools:layout_editor_absoluteY="259dp"
+        tools:layout_editor_absoluteX="71dp"
+        android:fontFamily="sans-serif"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:layout_marginBottom="218dp"
+        android:id="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wwww.go-fo-corp.com"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteY="229dp"
+        tools:layout_editor_absoluteX="118dp"
+        android:id="@+id/textView"
+        android:layout_marginBottom="21dp"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.tatetifome.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/tatetifome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button_02" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_01"
+        android:paddingLeft="65dp"
+        android:paddingRight="65dp"
+        android:text="about"
+        android:onClick="about"
+        android:textAllCaps="true"
+        android:background="#BBDEFB"
+        android:layout_marginBottom="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/button_02"
+        android:layout_alignStart="@+id/button_02" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_02"
+        android:paddingLeft="52dp"
+        android:paddingRight="52dp"
+        android:text="New Game"
+        android:onClick="onClick"
+        android:textAllCaps="true"
+        android:background="#BBDEFB"
+        android:layout_above="@+id/button_01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+
+
+
+
+</RelativeLayout>
