@@ -11,40 +11,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="fome"
+        android:text="Turn of X"
+        android:textSize="24sp"
         android:layout_alignParentBottom="true"
         android:id="@+id/turnOf_text"
         android:textColor="#FFFFFF"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="who won?"
+        android:text=""
+        android:textSize="36sp"
         android:textColor="#FFFFFF"
-        android:id="@+id/winCheck"/>
-
-    <View
-    android:layout_width="10dp"
-    android:layout_height="wrap_content"
-    android:layout_alignBottom="@+id/linearLayout2"
-    android:layout_centerHorizontal="true"
-    android:background="#1A237E"
-    android:elevation="10dp"
-    android:visibility="invisible"
-    android:id="@+id/winVertical01"/>
-
-
-    <View
-        android:id="@+id/winVertical02"
-        android:layout_width="10dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/linearLayout2"
-        android:layout_centerHorizontal="true"
-        android:background="#1A237E"
-        android:elevation="10dp"
-        android:rotation="205"
-        android:visibility="invisible" />
+        android:id="@+id/winCheck"
+        android:layout_above="@+id/turnOf_text"
+        android:layout_centerHorizontal="true"        />
 
 
 
@@ -64,14 +44,6 @@
         android:layout_weight="1"
         android:background="#212121">
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="10dp"
-            android:layout_centerInParent="true"
-            android:background="#1A237E"
-            android:elevation="10dp"
-            android:visibility="invisible"
-            android:id="@+id/winHorizontal01"/>
 
         <ImageButton
             android:id="@+id/box7"
@@ -110,15 +82,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#212121">
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="10dp"
-            android:layout_centerInParent="true"
-            android:background="#1A237E"
-            android:elevation="10dp"
-            android:visibility="invisible"
-            android:id="@+id/winHorizontal02"/>
 
         <ImageButton
             android:id="@+id/box4"
@@ -159,14 +122,6 @@
             android:layout_weight="1"
             android:background="#212121">
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"
-                android:layout_centerInParent="true"
-                android:background="#1A237E"
-                android:elevation="10dp"
-                android:visibility="invisible"
-                android:id="@+id/winHorizontal03"/>
 
             <ImageButton
                 android:id="@+id/box1"

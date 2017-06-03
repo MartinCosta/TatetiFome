@@ -182,7 +182,7 @@ public class NewGame extends AppCompatActivity {
                 if (boxArray[9] == 0 && turnCounter % 2 == 1) {
                     setMarkInBox9.setImageResource(R.drawable.x);
                     boxArray[9]=1;
-                } else if (boxArray[5] == 0 && turnCounter % 2 != 1) {
+                } else if (boxArray[9] == 0 && turnCounter % 2 != 1) {
                     setMarkInBox9.setImageResource(o);
                     boxArray[9]=-1;
                 }
@@ -199,14 +199,10 @@ public class NewGame extends AppCompatActivity {
 
         if (boxArray[1]==1 && boxArray[2]==1 && boxArray[3]==1) {
 
-//            View verticalView1 = findViewById(R.id.winHorizontal03);
-//            verticalView1.setVisibility(View.VISIBLE);
             displayMessageWin(winX);
 
         } else if (boxArray[1]==-1 && boxArray[2]==-1 && boxArray[3]==-1) {
 
-//            View verticalView1 = findViewById(R.id.winHorizontal03);
-//            verticalView1.setVisibility(View.VISIBLE);
             displayMessageWin(winO);
 
         } else if (boxArray[1]==1 && boxArray[4]==1 && boxArray[7]==1) {
@@ -219,37 +215,26 @@ public class NewGame extends AppCompatActivity {
 
         } else if (boxArray[4]==1 && boxArray[5]==1 && boxArray[6]==1) {
 
-//            View verticalView1 = findViewById(R.id.winHorizontal02);
-//            verticalView1.setVisibility(View.VISIBLE);
             displayMessageWin(winX);
+
         } else if (boxArray[4]==-1 && boxArray[5]==-1 && boxArray[6]==-1) {
 
-//            View verticalView1 = findViewById(R.id.winHorizontal02);
-//            verticalView1.setVisibility(View.VISIBLE);
             displayMessageWin(winO);
 
         } else if (boxArray[7]==1 && boxArray[8]==1 && boxArray[9]==1) {
 
-//            View verticalView1 = findViewById(R.id.winHorizontal01);
-//            verticalView1.setVisibility(View.VISIBLE);
             displayMessageWin(winX);
 
         } else if (boxArray[7]==-1 && boxArray[8]==-1 && boxArray[9]==-1) {
 
-//            View verticalView1 = findViewById(R.id.winHorizontal01);
-//            verticalView1.setVisibility(View.VISIBLE);
             displayMessageWin(winO);
 
         } else if (boxArray[2]==1 && boxArray[5]==1 && boxArray[8]==1){
 
-//            View verticalView1 = findViewById(R.id.winVertical01);
-//            verticalView1.setVisibility(View.VISIBLE);
             displayMessageWin(winX);
 
         } else if (boxArray[2]==-1 && boxArray[5]==-1 && boxArray[8]==-1) {
 
-//            View verticalView1 = findViewById(R.id.winVertical01);
-//            verticalView1.setVisibility(View.VISIBLE);
             displayMessageWin(winO);
 
         } else if (boxArray[3]==1 && boxArray[6]==1 && boxArray[9]==1) {
@@ -296,4 +281,5 @@ public class NewGame extends AppCompatActivity {
         checkWinTextView.setText(message);
     }
 }
+
 
