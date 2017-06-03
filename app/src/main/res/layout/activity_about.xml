@@ -35,7 +35,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="wwww.go-fo-corp.com"
+        android:text="www.go-fo-corp.com"
         android:textStyle="italic"
         android:textSize="15dp"
         tools:layout_editor_absoluteY="229dp"
