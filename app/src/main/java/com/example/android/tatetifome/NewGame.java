@@ -85,7 +85,6 @@ public class NewGame extends AppCompatActivity {
                     boxArray [3] = -1;
                 }
                 turnCounter++;
-                checkForPlayer();
                 checkWin();
                 break;
             case R.id.box4:
@@ -123,11 +122,11 @@ public class NewGame extends AppCompatActivity {
                 checkWin();
                 break;
             case R.id.box6:
+                ImageButton setMarkInBox6 = (ImageButton) findViewById(R.id.box6);
                 if (boxArray[6]!=0){                        //Stops the method if not empty
                     displayMessageWin("Not an empty box");
                     break;
                 }
-                ImageButton setMarkInBox6 = (ImageButton) findViewById(R.id.box6);
                 if (boxArray[6] == 0 && turnCounter % 2 == 1) {
                     setMarkInBox6.setImageResource(R.drawable.x);
                     boxArray[6]=1;
@@ -198,7 +197,6 @@ public class NewGame extends AppCompatActivity {
         String winO = "Player O is the winner!";
 
         if (boxArray[1]==1 && boxArray[2]==1 && boxArray[3]==1) {
-
             displayMessageWin(winX);
 
         } else if (boxArray[1]==-1 && boxArray[2]==-1 && boxArray[3]==-1) {
@@ -215,6 +213,7 @@ public class NewGame extends AppCompatActivity {
 
         } else if (boxArray[4]==1 && boxArray[5]==1 && boxArray[6]==1) {
 
+            
             displayMessageWin(winX);
 
         } else if (boxArray[4]==-1 && boxArray[5]==-1 && boxArray[6]==-1) {
@@ -223,14 +222,17 @@ public class NewGame extends AppCompatActivity {
 
         } else if (boxArray[7]==1 && boxArray[8]==1 && boxArray[9]==1) {
 
+    
             displayMessageWin(winX);
 
         } else if (boxArray[7]==-1 && boxArray[8]==-1 && boxArray[9]==-1) {
 
+            
             displayMessageWin(winO);
 
         } else if (boxArray[2]==1 && boxArray[5]==1 && boxArray[8]==1){
 
+            
             displayMessageWin(winX);
 
         } else if (boxArray[2]==-1 && boxArray[5]==-1 && boxArray[8]==-1) {
