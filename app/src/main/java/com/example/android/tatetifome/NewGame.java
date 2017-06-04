@@ -13,7 +13,7 @@ import static com.example.android.tatetifome.R.drawable.o;
 public class NewGame extends AppCompatActivity {
 
     boolean isLockedB7;         /* booleans to unlocked or locked Boxes*/
-    boolean isLockedB8;
+    boolean isLockedB8;         // TODO check is this could be done with array or another kind of collection
     boolean isLockedB9;
     boolean isLockedB4;
     boolean isLockedB5;
@@ -25,7 +25,7 @@ public class NewGame extends AppCompatActivity {
     String turnOfO = "O";
     int turnCounter = 1;
     boolean xBox1_check = false;    /* booleans variables to check player winner and display "X" or "O"*/
-    boolean xBox2_check = false;
+    boolean xBox2_check = false;    // TODO check is this could be done with array or another kind of collection
     boolean xBox3_check = false;
     boolean xBox4_check = false;
     boolean xBox5_check = false;
@@ -185,7 +185,7 @@ public class NewGame extends AppCompatActivity {
         String winO = "Player O is the winner!";
 
         if ((xBox1_check && xBox2_check && xBox3_check) == true) {
-
+            // TODO remove unnecesary white spaces.. hard to read
             View verticalView1 = findViewById(R.id.winHorizontal03);
             verticalView1.setVisibility(View.VISIBLE);
             displayMessageWin(winX);
