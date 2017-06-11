@@ -37,43 +37,48 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="152dp">
 
-    <RelativeLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="#212121">
-
-        <ImageButton
-            android:id="@+id/box7"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:scaleType="centerCrop"
-            android:onClick="mark"
-            />
+            android:background="#212121">
 
-        <ImageButton
-            android:id="@+id/box8"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/box7"
-            android:layout_weight="1"
-            android:scaleType="centerCrop"
-            android:onClick="mark" />
+            <ImageButton
+                android:id="@+id/box7"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="mark"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-        <ImageButton
-            android:id="@+id/box9"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/box8"
-            android:scaleType="centerCrop"
-            android:layout_weight="1"
-            android:onClick="mark" />
+            <ImageButton
+                android:id="@+id/box8"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="mark"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/box7"
+                android:layout_toEndOf="@+id/box7" />
+
+            <ImageButton
+                android:id="@+id/box9"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="mark"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/box8"
+                android:layout_toEndOf="@+id/box8" />
 
 
-
-      </RelativeLayout>
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
